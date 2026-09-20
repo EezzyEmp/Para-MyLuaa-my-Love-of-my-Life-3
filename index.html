@@ -285,6 +285,9 @@ body {
 </head>
 
 <body>
+    <audio id="musicaFondo" loop preload="auto">
+    <source src="love-romantic-hopeful-music-509500.mp3" type="audio/mpeg">
+    </audio>
 
 <!-- PANTALLA INICIAL -->
 <section id="inicio">
@@ -584,6 +587,9 @@ body {
 
 /* ENTRAR A LA SORPRESA */
 function entrar() {
+        const musica = document.getElementById("musicaFondo");
+    musica.volume = 0.35;
+    musica.play().catch(() => {});
     document.getElementById("inicio").classList.add("ocultar");
 
     // Creamos corazones al entrar
