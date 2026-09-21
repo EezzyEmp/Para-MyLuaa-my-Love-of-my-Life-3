@@ -293,71 +293,7 @@ body {
     }
     50% {
         transform: scale(1.12);
-    }
-    }
-    /* ✨ EFECTO AL TOCAR UNA FLOR */
-.destello-flor {
-    position: fixed;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    background: radial-gradient(
-        circle,
-        rgba(255, 239, 150, 0.75) 0%,
-        rgba(255, 211, 92, 0.35) 35%,
-        rgba(255, 211, 92, 0) 70%
-    );
-    transform: translate(-50%, -50%) scale(0.4);
-    animation: brilloFlor 0.8s ease-out forwards;
-}
-
-@keyframes brilloFlor {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.3);
-    }
-
-    35% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(1.35);
-    }
-}
-
-/* 🌼 Pétalos que flotan */
-.petalo-flor {
-    position: fixed;
-    pointer-events: none;
-    z-index: 9998;
-    color: #f5c542;
-    font-size: 13px;
-    text-shadow: 0 0 6px rgba(255, 210, 80, 0.7);
-    animation: petaloFlotando 1.2s ease-out forwards;
-}
-
-@keyframes petaloFlotando {
-    0% {
-        opacity: 0;
-        transform: translate(0, 0) rotate(0deg) scale(0.6);
-    }
-
-    20% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        transform:
-            translate(var(--x), var(--y))
-            rotate(var(--rot))
-            scale(0.9);
-    }
+    }        
     }
 </style>
 </head>
