@@ -617,57 +617,6 @@ function entrar() {
 function mostrar(texto) {
     document.getElementById("mensajeFlor").innerHTML =
         "✨ " + texto + " ✨";
-
-    const flor = event.currentTarget;
-    const rect = flor.getBoundingClientRect();
-
-    // ✨ Brillo de la flor
-    const destello = document.createElement("div");
-    destello.className = "destello-flor";
-
-    destello.style.left =
-        (rect.left + rect.width / 2) + "px";
-
-    destello.style.top =
-        (rect.top + rect.height / 2) + "px";
-
-    document.body.appendChild(destello);
-
-    setTimeout(() => {
-        destello.remove();
-    }, 800);
-
-    // 🌼 Pétalos flotando
-    for (let i = 0; i < 7; i++) {
-        const petalo = document.createElement("div");
-
-        petalo.className = "petalo-flor";
-        petalo.textContent = "✦";
-
-        petalo.style.left =
-            (rect.left + rect.width / 2) + "px";
-
-        petalo.style.top =
-            (rect.top + rect.height / 2) + "px";
-
-        const x = (Math.random() - 0.5) * 120;
-        const y = -40 - Math.random() * 90;
-        const rot = (Math.random() - 0.5) * 180;
-
-        petalo.style.setProperty("--x", x + "px");
-        petalo.style.setProperty("--y", y + "px");
-        petalo.style.setProperty("--rot", rot + "deg");
-
-        petalo.style.animationDelay =
-            (Math.random() * 0.15) + "s";
-
-        document.body.appendChild(petalo);
-
-        setTimeout(() => {
-            petalo.remove();
-        }, 1400);
-    }
-}
     crearCorazon();
 }
 
